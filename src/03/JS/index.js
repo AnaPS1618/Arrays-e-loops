@@ -8,7 +8,6 @@ let array = []
 function verificarArray(){
     array.push(numero.value)
     let localizarNumero = Number(numVerifi.value)
-    console.log(array)
 
 
     const setUnico = new Set(array);
@@ -20,11 +19,8 @@ function verificarArray(){
 
     
 
-    console.log(arrayDeNumero)
-
     const setUnico2 = new Set(arrayDeNumero);
     const deVoltaAAray2 = [...setUnico2];
-    console.log(deVoltaAAray2)
     let localizar = deVoltaAAray2.indexOf(localizarNumero) + 1
 
     console.log(localizar)
