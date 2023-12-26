@@ -1,48 +1,45 @@
 
 let buttonSubmitCount = document.querySelector('#submitCount')
 let valor = document.querySelector('#valor')
-let listagem = document.querySelector('#listagem')
-let list = document.querySelector('#list')
+
 let listResult = document.querySelector('#listResult')
 
-let submitResult = document.querySelector('#submitResult')
+let reset = document.querySelector('#reset')
 
-buttonSubmitCount.addEventListener("click", adicionar)
-buttonSubmitCount.addEventListener("keydown", function(event){
-    if(event.key === 'enter'){
-        return adicionar
-    }
-})
-submitResult.addEventListener("click", somar)
+buttonSubmitCount.addEventListener("click", somarValores)
+reset.addEventListener("click", limpandoArea)
 
 let arr = []
-let juntando;
 
 
-function adicionar(){
+function somarValores(){
 
     if(valor.value === ''){
-        alert('por favor, informar um valor')
-    }else{
+        alert('Campo vazio ou inserido uma string')
+    }
+    
     arr.push(valor.value)
+
+    let tranformandoEmNumeros = arr.join(', ').toString()
+                                    .replaceAll(',', '').split(' ')
+                                    .map(n => parseInt(n, 10))
+    
+    let saoNumeros = tranformandoEmNumeros.every(numero => !isNaN(numero));
+    
+    if (!saoNumeros) {
+        alert('Campo vazio ou informado uma string')
+        return limpandoArea()
     }
 
-    juntando = arr.toString().replaceAll(',', '+')
-    list.innerHTML = juntando
-    listagem.lastChild = juntando
-    console.log(arr)
+    let retirandoRepetidos = new Set(tranformandoEmNumeros)
+    let repetidosRetirados = [...retirandoRepetidos]
+
+    listResult.innerHTML = repetidosRetirados
 
 }
 
-function somar(n){
-
-    let arrayDeNumeros = arr.map(str => parseInt(str, 10))
-
-    let soma = arrayDeNumeros.reduce(function(n, value){
-        return n + value
-    })
-    
-    listResult.innerHTML = `Soma dos valores: ${soma}`
-
-    console.log('Soma dos valores:', soma);
+function limpandoArea(){
+    valor.value = ''
+    arr = []
+    listResult.innerHTML = ''
 }

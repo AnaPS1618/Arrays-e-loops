@@ -11,19 +11,25 @@
 <body>
 
     <section>
-        <h2>SOMANDO ARRAYS</h2>
-        <label for="valor">Informar numero:</label>
-        <input type="number" name="valor" id="valor" placeholder="...">
-
-        <button id="submitCount">enviar</button>
-        <div id="listagem">
-            <p id="list"></p>
+        <h2>SOMANDO VALORES DENTRO DE UMA ARRAY</h2>
+        <i>Exemplo de como informar a array: 2, 3, 4, 6...
+            <br>
+           Obs::.. Numeros repetidos não acomula na contagem.
+           <br>
+           Se informado letras, automaticamente a array será resetada ao fazer a somagem       
+        </i>
+        <div>
+            <label for="valor">Array:</label>
+            <input type="text" name="valor" id="valor" placeholder="...">
         </div>
 
-        <button id="submitResult">contar</button>
+        <button id="submitCount">contar</button>
+
         <div id="listagemResult">
             <p id="listResult"></p>
         </div>
+
+        <button id="reset">reset</button>
 
         <script src="../JS/index.js"></script>
     </section>

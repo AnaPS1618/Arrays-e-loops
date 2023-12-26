@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 html, body{
@@ -16,43 +17,65 @@ section{
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #efefd0;
 }
 
 h2{
-    border: 1px solid #2a9d8f;
-    background-color: #2a9d8f;
+    text-align: center;
+    width: 80dvw;
+    border-radius: 10px;
+    background-color: #ff6b35;
     padding: 2%;
-    color: #264653;
+    color: white;
+    margin: 20px;
 }
 
-#submitCount{
-    margin-top: 10px;
+i{
+    text-align: center;
+    background-color: #f7c59f;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+#valor{
+    margin: 20px;
+}
+
+#listagemResult{
+    width: 80dvw;
+    height: 10dvh;
+    background-color: #f7c59f;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 button{
-    border: 1px solid #e76f51;
+    width: 80dvw;
+    height: 5dvh;
+    border: none;
     border-radius: 5px;
-    background-color: #e76f51;
+    background-color: #1a659e;
     color: white;
     padding: 0.5%;
     cursor: pointer;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 button:hover{
-    background-color: #e9c46a;
-    border: 1px solid #e9c46a;
+    background-color: #004e89;
 }
 
 #listagem{
-    width: 20dvw;
+    width: 80dvw;
     height: 20dvh;
     text-align: center;
     border: 1px solid black;
     overflow: auto;
     padding: 1%;
     word-break: break-all;
-    border: 1px solid #f4a261;
-    background-color: #f4a261;
-    margin: 10px;
+    border: none;
+    background-color: #3da5d9;
 }
