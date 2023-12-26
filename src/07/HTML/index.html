@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+
+    <section>
+
+        <h2>LOCALIZANDO NOMES PELA PRIMEIRA LETRA</h2>
+
+        <i>
+            Exemplo de como informar a array: Ana, Joana, Carlos, amanda
+            <br>
+           Obs::.. Nomes repetidos não acomula na verificação.
+           <br>
+           Se informado numeros, automaticamente a array será resetada ao realizar a verificação de nomes
+        </i>
+
+        <div>
+            <label for="texto">Inserir nomes: </label>
+            <input type="text" name="texto" id="nomesInformados">
+        </div>
+    
+        <div>
+            <label for="texto2">localizar pela letra: </label>
+            <input type="text" name="texto2" id="letraParaLocalizar">
+        </div>
+
+        <button type="submit" id="localizarNome">LOCALIZAR</button>
+        
+        <p id="result"></p>
+
+        <button type="submit" id="reset">RESET</button>
+
+    </section>
+    
+
+    <script src="../JS/index.js"></script>
+</body>
+</html>

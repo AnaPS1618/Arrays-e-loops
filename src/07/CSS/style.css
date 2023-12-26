@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #87c38f;
+}
+
+h2{
+    text-align: center;
+    width: 80dvw;
+    background-color: #f4f0bb;
+    padding: 1%;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#nomesInformados{
+    width: 50dvw;
+}
+
+i{
+    background-color: #da2c38;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    outline: none;
+}
+
+p{
+    width: 80dvw;
+    height: 20dvh;
+    background-color: #f4f0bb;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+button{
+    width: 80dvw;
+    height: 5dvh;
+    border: none;
+    border-radius: 5px;
+    background-color: #226f54;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #43291f;
+}
